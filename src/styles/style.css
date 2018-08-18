@@ -1,0 +1,493 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+.banner {
+	display: none;
+	position: fixed;
+	padding: 3vmin;
+	top: 10vh;
+	left: calc(50vw - 40vmin);
+	height: 20vmin;
+	min-height: 10vmin;
+	width: 80vmin;
+	text-align: center;
+	font: normal 15vmin 'Tahoma', sans-serif;
+	color: #fff;
+	text-shadow: 0 0 5vmin;
+	z-index: 90;
+}
+
+.banner-win {
+	color: #ff0;
+}
+
+.banner-lose {
+	color: #f77;
+}
+
+.disclaimer {
+	display: block;
+	position: fixed;
+	/*padding: 3vmin;*/
+	top: 3vh;
+	left: 0; 
+	height: 10vmin;
+	min-height: 10vmin;
+	width: 100%;
+	text-align: center;
+	font: bold 1em 'Tahoma', sans-serif;
+	color: #f00;
+	z-index: 100;
+}
+
+.menu {
+	display: none;
+	position: fixed;
+	padding: 1em;
+	top: 50vh;
+	left: 30vw;
+	height: 30vh;
+	width: 40vw;
+	border: 0.2em solid #ddd;
+	border-radius: 1em;
+	box-shadow: inset 0 0 2em 0 #ff5;	
+	text-align: center;
+	z-index: 90;
+}
+
+.btn {
+	display: block;
+	height: 10vh;
+	margin-top: 5vh;
+	vertical-align: middle;
+	font: normal 4vmax 'Tahoma', sans-serif;
+	color: #eee;
+	cursor: default;
+}
+
+.btn:hover {
+	color: #ff5;
+	/*box-shadow: inset 0 0 2em 0 #ff5;	*/
+}
+
+.container {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+.sky {
+	display: block;
+	height: 80vh;
+	background: url('../img/sky2.jpg') center no-repeat;
+	overflow: hidden;
+}
+
+.ground {
+	display: block;
+	position: relative;
+	height: 20vh;
+	background: url('../img/ground.jpg') center no-repeat;
+}
+
+.tree {
+	position: absolute;
+	width: 40vw;
+	height: 70vh;
+	left: 5vw;
+	bottom: 19vh;
+	background: url('../img/tree2.png') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.grass {
+	position: absolute;
+	height: 40vh;
+	bottom: 15vh;
+	background: url('../img/grass2.png') bottom no-repeat;
+	z-index: 5;
+}
+
+.board {
+	display: none;
+	position: absolute;
+	padding: 1.5vmin;
+	bottom: 2vh;
+	height: 6vmin;
+	min-height: 3vmin;
+	border: 0.1vmin solid #fff;
+	border-radius: 0.5vmin;
+	color: #fff;
+	font: normal 2vmin 'Tahoma', sans-serif;
+	box-shadow: inset 0 0 1vmin 0 #fff;	
+	overflow: hidden;	
+	z-index: 90;
+}
+
+.score-board {
+	right: 2vw;
+	width: 18vmin;
+}
+
+.stat-board {
+	left: 2vw;
+	width: 28vmin;
+}
+
+.stat-board p, span, i {
+	display: block;
+	margin: 0.5vmin 0;
+	padding: 0;
+	height: 3vmin;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.stat-board i {
+	display: inline-block;
+	margin: 0;
+	height: 2vmin;
+	width: 2vmin;
+	background: url('../img/bullet.png') no-repeat;
+	background-size: 2vmin 2vmin;
+}
+
+.stat-board span {	
+	width: 27.5vmin;
+	height: 2vmin;
+	/*background-color: #0d0;*/
+	border: 0.1vmin solid #0d0;
+	border-radius: 0.3vmin;
+	box-shadow: inset 0 0 3vmin 0 #0d0;	
+	animation: timer 0s linear 5s 1 forwards;
+}
+
+@keyframes timer {
+	0% {
+		width: 27.5vmin;
+	}
+
+	49% {
+		border-color: #0d0;
+		box-shadow: inset 0 0 3vmin 0 #0d0;
+	}
+
+	50% {
+		border-color: #dd0;
+		box-shadow: inset 0 0 3vmin 0 #dd0;
+	}
+	
+	79% {
+		border-color: #dd0;
+		box-shadow: inset 0 0 3vmin 0 #dd0;
+	}
+	
+	80% {
+		border-color: #d00;
+		box-shadow: inset 0 0 3vmin 0 #d00;
+	}
+
+	82% {
+		border-color: #dd0;
+		box-shadow: inset 0 0 3vmin 0 #dd0;
+	}
+
+	84% {
+		border-color: #d00;
+		box-shadow: inset 0 0 3vmin 0 #d00;
+	}
+
+	86% {
+		border-color: #dd0;
+		box-shadow: inset 0 0 3vmin 0 #dd0;
+	}
+
+	88% {
+		border-color: #d00;
+		box-shadow: inset 0 0 3vmin 0 #d00;
+	}
+	
+	90% {
+		border-color: #dd0;
+		box-shadow: inset 0 0 3vmin 0 #dd0;
+	}
+
+	92% {
+		border-color: #d00;
+		box-shadow: inset 0 0 3vmin 0 #d00;
+	}
+
+	94% {
+		border-color: #dd0;
+		box-shadow: inset 0 0 3vmin 0 #dd0;
+	}
+
+	96% {
+		border-color: #d00;
+		box-shadow: inset 0 0 3vmin 0 #d00;
+	}
+
+	98% {
+		border-color: #dd0;
+		box-shadow: inset 0 0 3vmin 0 #dd0;
+	}
+
+	100% {
+		width: 0;
+		border-color: #d00;
+		box-shadow: inset 0 0 3vmin 0 #d00;
+
+	}
+}
+
+.bg {
+	width: 100%;
+	left: 0;
+	background-size: 100% 100%;
+}
+
+.duck {
+	position: fixed;
+	top: 5vh;
+	left: 30vw;
+	width: 6vw;
+	height: 12vh;
+	background: url('../img/duck-w.gif') bottom no-repeat;
+	background-size: 100% 100%;
+	/*border: 1px dotted #fff;*/
+}
+
+.duck2 {
+	top: 8vh;
+	left: 45vw;
+}
+
+.duck3 {
+	top: 8vh;
+	left: 35vw;
+}
+
+.duck-nw {
+	background: url('../img/duck-nw.gif') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+.duck-w {
+	background: url('../img/duck-w.gif') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+.duck-sw {
+	background: url('../img/duck-sw.gif') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+.duck-se {
+	background: url('../img/duck-se.gif') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+.duck-e {
+	background: url('../img/duck-e.gif') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+.duck-ne {
+	background: url('../img/duck-ne.gif') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+.duck-h-w {
+	background: url('../img/duck-hit-w.png') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+.duck-h-e {
+	background: url('../img/duck-hit-e.png') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+.duck-f-w {
+	background: url('../img/duck-falling-w.png') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+.duck-f-e {
+	background: url('../img/duck-falling-e.png') bottom no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.dog {
+	position: absolute;
+	bottom: 5vh;
+	left: -13vw;
+	width: 12vw;
+	height: 18vh;
+	background: url('../img/dog.png') bottom no-repeat;
+	background-size: 75vw 34vh; /* 39.2vh */
+	z-index: 6;
+}
+
+.dog-show {
+	bottom: 15vh;
+	left: 44vw;
+	width: 12vw;
+	height: 18vh;
+	background-position: -60vw 0;
+	animation: dogShow 2s linear 1;
+	transition: none;
+	z-index: 0;
+}
+
+.dog-show2 {
+	background-position: -60vw -18vh;
+}
+
+@keyframes dogShow {
+	0% {
+		bottom: 15vh;
+	}
+	20% {
+		bottom: 28vh;	
+	}
+	80% {
+		bottom: 28vh;	
+	}
+	100% {
+		bottom: 15vh;	
+	}
+}
+
+.dog-laughs {
+	bottom: 15vh;
+	left: 44vw;
+	width: 12vw;
+	height: 18vh;
+	background-position: -36vw -18vh;
+	animation-name: dogShow, dogLaughs;
+	animation-delay: 0, 0;
+	animation-duration: 2s, 0.2s;
+	animation-iteration-count: 1, infinite;
+	animation-timing-function: linear, step-end;
+	/*animation: dogShow 2s linear 1, dogLaughs 0.2s step-end infinite;*/
+	transition: none;
+	z-index: 0;
+}
+
+@keyframes dogLaughs {
+	0% {
+		background-position: -36vw -18vh;
+	}
+	50% {
+		background-position: -48vw -18vh;
+	}
+	100% {
+		background-position: -36vw -18vh;
+	}
+}
+
+.dog-walk {
+	animation: dogWalk 0.5s step-end infinite;
+}
+
+@keyframes dogWalk {
+	0% {
+		background-position: 0 0;
+	}
+
+	20% {
+		background-position: -12vw 0;
+	}
+
+	40% {
+		background-position: -24vw 0;
+	}
+
+	60% {
+		background-position: -36vw 0;
+	}
+
+	80% {
+		background-position: -48vw 0;
+	}
+
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.dog-jump {
+	animation: dogJump 0.8s step-end 1 forwards;
+}
+
+@keyframes dogJump {
+	0% {
+		background-position: 0 -18vh;
+	}
+
+	45% {
+		background-position: -12vw -18vh;
+		bottom: 10vh;
+	}
+
+	70% {
+		background-position: -24vw -18vh;
+		bottom: 15vh;
+	}
+
+	100% {
+		background-position: -24vw -18vh;
+	}
+}
+
+.feather {
+	position: fixed;
+	width: 6vw;
+	height: 12vh;
+	background: url('../img/feather.png') bottom no-repeat;
+	background-size: 45vw 13vh;
+	animation: feather 1.8s step-end 1 forwards;
+}
+
+@keyframes feather {
+	0% {
+		background-position: 0 0;
+	}
+
+	15% {
+		background-position: -10vw 0;
+	}
+
+	30% {
+		background-position: -20vw 0;
+	}
+
+	45% {
+		background-position: -30vw 0;
+	}
+
+	60% {
+		background-position: -40vw 0;
+	}
+
+	75% {
+		background-position: -50vw 0;
+	}
+
+	80% {
+		background-position: -60vw 0;
+	}
+
+	90% {
+		background-position: -70vw 0;
+	}
+
+	100% {
+		background-position: -80vw 0;
+	}
+}
